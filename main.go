@@ -11,6 +11,7 @@ import (
 func main() {
 	config.InitDB()
 	fmt.Println("Apps started")
+	setRouter()
 }
 
 func setRouter() {
