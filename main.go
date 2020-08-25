@@ -5,6 +5,7 @@ import (
 
 	"github.com/afadhitya/finance-history/config"
 	"github.com/afadhitya/finance-history/service"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -21,5 +22,6 @@ func setRouter() {
 		accountType.POST("/", service.SaveAccountType)
 	}
 
+	router.Use(cors.Default())
 	router.Run(":8081")
 }
